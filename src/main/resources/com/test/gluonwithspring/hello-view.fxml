@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane layoutX="0.0" layoutY="0.0" prefWidth="900"
+	prefHeight="526" fx:id="mainPane" xmlns:fx="http://javafx.com/fxml"
+	fx:controller="com.test.gluonwithspring.HelloController">
+	<top>
+		<MenuBar fx:id="menuBar" prefHeight="23.0" prefWidth="701.0" BorderPane.alignment="CENTER">
+			<menus>
+				<Menu fx:id="menu1" text="Menu1">
+					<items>
+						<MenuItem fx:id="menuDemo"
+							onAction="#menuDemoExecuted" text="Demo..." />
+						<SeparatorMenuItem />
+						<MenuItem fx:id="menuClose"
+							onAction="#menuCloseExecuted" text="Close" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<HBox alignment="CENTER" spacing="20.0">
+		    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+		    <Label fx:id="welcomeText" text="Please click..."/>
+		</HBox>
+	</center>
+</BorderPane>
