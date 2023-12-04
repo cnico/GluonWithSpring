@@ -57,12 +57,13 @@ public class HelloApplication extends Application {
     public static void main(String[] args) {
     	logger.info("Starting main ...");
     	
-    	// Lancement de Spring
+    	// Initializes Spring context
     	new SpringApplicationBuilder(HelloApplication.class).run();
         
         String mainRunner = System.getProperty("sun.java.command");
         if ("org.springframework.boot.SpringApplicationAotProcessor".equals(mainRunner)) {
-        	//For Spring's AOT build phase with maven, the SpringContext is sufficient and the JavaFX window make AOT generation fail.
+        	//For Spring's AOT build phase with maven, the SpringContext is sufficient. 
+        	//So we have to stop here because otherwise JavaFX window makes AOT generation fail.
         	logger.info("Simple run for Spring AOT");
         	return;
         }

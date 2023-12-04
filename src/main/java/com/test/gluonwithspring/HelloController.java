@@ -17,7 +17,7 @@ public class HelloController {
  
 	@FXML
 	private MenuBar menuBar;
-	// Dossier
+	
 	@FXML
 	private MenuItem menu1;
 	@FXML
